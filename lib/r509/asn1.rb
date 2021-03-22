@@ -103,6 +103,7 @@ module R509
       # @param [String,Symbol] type of GeneralName
       # @return [Integer] tag for the type
       def self.map_type_to_tag(type)
+        puts "Checking map_type_to_tag"
         #        otherName                       [0]     OtherName,
         #        rfc822Name                      [1]     IA5String,
         #        dNSName                         [2]     IA5String,
@@ -128,6 +129,7 @@ module R509
       # @param [Integer] tag
       # @return [String] serial prefix
       def self.map_tag_to_short_type(tag)
+        puts "Checking map_tag_to_short_type"
         case tag
         when 0 then "other"
         when 1 then "email"
@@ -143,6 +145,7 @@ module R509
       # @param [Integer] tag
       # @return [Symbol] symbol type
       def self.map_tag_to_type(tag)
+        puts "Checking map_tag_to_type"
         case tag
         when 0 then :otherName
         when 1 then :rfc822Name
